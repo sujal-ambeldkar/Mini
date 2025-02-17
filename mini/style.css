@@ -1,0 +1,187 @@
+   body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.top { 
+     
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('plant.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 440px;
+    color: white;
+    text-align: center;
+    display: flex;
+   
+    align-items: center;
+  }
+  .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px; 
+    color: #4CAF50;
+}
+
+
+
+/* .top .cards1 {
+  
+    background-color: white;
+    display: inline-block;
+    width: 35%;
+    border-radius: 5px;
+    margin: 21px;
+    box-shadow: 2px 2px 10px black;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; } */
+
+.cards1:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+}
+
+ /* Image within the card  */
+.image1 img {
+    /* height:150px; */
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: transform 0.3s ease; 
+} 
+
+.cards1:hover .image img {
+    transform: scale(1.05); 
+}
+.para{
+    color: black;
+    margin: 10px;
+}   
+.container{
+    display:flex;
+}
+
+
+
+
+
+/* .para {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; 
+    margin: 0;
+    background-color:#f4f4f4;
+    /* background-color: #f0f4f8; */
+   
+
+.para h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Dark gray initial color */
+    text-align: center;
+    animation: colorChange 3s ease-in-out infinite, slideIn 1s ease-out forwards;
+}
+
+/* Animation for color change with dark shades */
+@keyframes colorChange {
+    0% {
+        color: #333; /* Dark gray initial color */
+    }
+    50% {
+        color: #666666; /* Darker gray (almost black) */
+    }
+    100% {
+        color: #333; /* Back to dark gray */
+    }
+}
+/*  - - - - - - - - - - - - - nav = = = = = = = = = = = = = = = = */
+*{
+    text-decoration: none;
+}
+.navbar{
+    background:#ceecd9; font-family: calibri; padding-right: 15px;padding-left: 15px;
+}
+.navdiv{
+    display: flex; align-items: center; justify-content: space-between;
+    height: 50px;
+}
+.logo a{
+    font-size: 35px; font-weight: 600; color: white;
+}
+li{
+    list-style: none; display: inline-block;
+}
+li a{
+    color: black; font-size: 18px; font-weight: bold; margin-right: 25px;
+}
+button{
+    background-color: black; margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+}
+button a{
+    color:black; font-weight: bold; font-size: 15px;
+}
+li a:hover {
+    color: #FF6347; /* Change color on hover, can be any color you like */
+    text-decoration: underline; /* Optional: Adds an underline on hover */
+}
+/* CARD */
+
+.card1{
+    width:300px;
+    height: 300px;
+    background:rgb(90 170 255 / 74%);
+    padding:28px;
+    border-radius: 15px;
+    text-align: center;
+}
+.card1 h1{
+    color:black;
+    font-weight: 500;
+}
+#profile-pic{
+    top:-45px;
+    position:relative;
+    left:5px;
+    width:180px;
+    height:180px;
+    border-radius: 50%;
+}
+.able{
+    position: relative;
+    top:-53px;
+    left:99px;
+ display:block;
+       width:147px;
+    background-color: #e3362c;
+    color: #fff;
+    padding:12px;
+    margin:10px auto;
+    border-radius: 5px;
+    cursor:pointer;
+
+} 
+#imageInput{
+    display:none;
+}  
+/* #middle{
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+} */
+label{
+    position: relative;
+    left:-104px;
+    display:block;
+    width:114px;
+ background-color: #e3362c;
+ color: #fff;
+ padding:12px;
+ margin:10px auto;
+ border-radius: 5px;
+ cursor:pointer;
+
+}

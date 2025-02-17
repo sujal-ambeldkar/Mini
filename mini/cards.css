@@ -1,0 +1,167 @@
+ body{
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+
+ }
+ /* .main{
+    display:flex;
+    flex-wrap: wrap;
+     justify-content: space-between; 
+}
+.cards{
+   display: inline-block;
+    width:20%;
+    
+    border-radius: 5px;
+    margin: 21px;
+    box-shadow: 2px 2px 10px black;
+    
+}
+.image img{
+    width:100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.title{
+    text-align: center;
+    padding: 5px;
+}
+.des{
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}   */
+/* heading */
+
+.heading {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; 
+    margin: 0;
+    background-color:#f4f4f4;
+    /* background-color: #f0f4f8; */
+  }
+
+.heading h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333; /* Dark gray initial color */
+    text-align: center;
+    animation: colorChange 3s ease-in-out infinite, slideIn 1s ease-out forwards;
+}
+
+/* Animation for color change with dark shades */
+@keyframes colorChange {
+    0% {
+        color: #333; /* Dark gray initial color */
+    }
+    50% {
+        color: #666666; /* Darker gray (almost black) */
+    }
+    100% {
+        color: #333; /* Back to dark gray */
+    }
+}
+
+
+  /* cards */
+  /* Main container */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Cards styling */
+.cards {
+    background-color: white;
+    display: inline-block;
+    width: 19%;
+    border-radius: 5px;
+    margin: 21px;
+    box-shadow: 2px 2px 10px black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.cards:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+}
+
+/* Image within the card */
+ .image img {
+     height: 240px;
+     width: 290px; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+.cards:hover .image img {
+    transform: scale(1.05); /* Slight zoom effect on image */
+}
+
+/* Title section */
+.title { 
+    font-size: 72%;
+    text-align: center;
+    /* padding: 5px; */
+}
+
+/* Description section */
+.des {
+    text-align: center;
+}
+
+/* Button styling */
+button {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    transform: scale(1.05); /* Slight zoom effect on button */
+}
+.apple{
+    background-color: #f4f4f4;
+}
+/* gjhgjgjhgkjhhiuhiuhiuhihihihi */
+.read-more-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 4px 24px; /* Padding for spacing */
+    border: none; /* Remove default border */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase letters */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.read-more-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-4px); /* Slightly lift the button on hover */
+}
+
+.read-more-btn:active {
+    transform: translateY(2px); /* Slightly press the button when clicked */
+}
+
+.read-more-btn:focus {
+    outline: none; /* Remove outline on focus */
+}
