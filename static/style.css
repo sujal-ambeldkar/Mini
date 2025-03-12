@@ -1,0 +1,201 @@
+    .heading {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+        margin: 0;
+        font-size: 60px;
+        /* background-color: #f4f4f4; */
+
+    }
+
+    .heading h1 {
+        font-size: 60px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        animation: colorChange 3s ease-in-out infinite, slideIn 1s ease-out forwards;
+    }
+
+    /* Animation for color change with dark shades */
+    @keyframes colorChange {
+        0% {
+            color: #333;
+            /* Dark gray initial color */
+        }
+
+        50% {
+            color: #666666;
+            /* Darker gray (almost black) */
+        }
+
+        100% {
+            color: #333;
+            /* Back to dark gray */
+        }
+    }
+
+.main {
+    background: linear-gradient(145deg, rgba(90, 139, 65, 0.582), rgba(31, 36, 31, 0.808));
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 98%;
+    padding: 3rem 1rem;
+    border-radius: 30px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+    .cards {
+        background-color: rgb(153, 170, 163);
+        display: flex;
+        border-radius: 25px;
+        flex-wrap: wrap;
+        /* Ensures the cards will wrap to the next row if needed */
+        justify-content: space-around;
+        /* Distributes cards evenly */
+        gap: 5px;
+        /* Optional: adds space between the cards */
+        margin: 45px;
+    }
+
+    .card-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 350px;
+        /* Set the card's width */
+        height: 500px;
+        /* Optional: to limit the card height */
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .image img {
+        width: 100%;
+        /* Full width of the card */
+        height: 250px;
+        /* Fixed height for the image */
+        object-fit: cover;
+        /* Ensures the image doesn't stretch */
+    }
+
+    .title h1 {
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    .des {
+        padding: 15px;
+        flex-grow: 1;
+        /* Ensures the description takes the remaining space */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Pushes the button to the bottom */
+    }
+
+    .read-more-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+        /* Adds some space between the description and the button */
+    }
+
+    .read-more-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .apple {
+        background-image: url('tropical.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .read-more-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .card-contain:hover {
+        transform: translateY(-13px);
+        transition: 0.5s;
+        /* Lift the card */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        /* Stronger shadow */
+    }
+
+    .card-contain:hover .image img {
+        transform: scale(1);
+        /* Slightly zoom the image */
+        transition: transform 0.3s ease;
+    }
+
+    .card-contain:hover .des {
+        background-color: #f5f5f5;
+        transition: 0.5s;
+        /* Change background of the description */
+    }
+
+    .card-contain .read-more-btn:hover {
+        background-color: #45a049;
+        /* Darken button on hover */
+    }
+
+/* Smooth transition effect */
+#content {
+    transition: opacity 0.3s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.heading h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+
+    color: rgb(0, 0, 0);
+    border-radius: 22px;
+    letter-spacing: 1px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: slideIn 0.5s forwards;
+    /* Triggering the animation */
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

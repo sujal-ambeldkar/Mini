@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Layout Structure */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+    .image-container {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 75px; /* Added margin to push down */
+        align-self: flex-start; /* Changed alignment */
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: -10px; /* Pull up info container slightly */
+    }
+
+        /* Image Styling */
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            aspect-ratio: 1/1;
+        }
+
+        /* Text Styling */
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+
+
+        .highlight {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .details {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .value {
+            color: #f1f1f1;
+            line-height: 1.5;
+            padding-left: 28px;
+        }
+
+        /* Button Styling */
+        .btn {
+            align-self: flex-start;
+            background: #ff4757;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #ff6b81;
+            transform: translateY(-2px);
+        }
+
+        /* Past Predictions */
+        .past-predictions {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .past-predictions h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .prediction-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .prediction-table td,
+        .prediction-table th {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .prediction-table th {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .table-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .image-container {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .highlight {
+                font-size: 1.3rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .value {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>🌱 Plant Disease Detection Result</h2>
+        <div class="content-wrapper">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Analyzed Plant Image" />
+            </div>
+
+            <div class="info-container">
+                <div class="diagnosis-result">
+                    <p class="highlight">Detected Condition: {{ result }}</p>
+                </div>
+
+                <div class="details">
+                    <div class="detail-item">
+                        <span class="label">📌 Description</span>
+                        <span class="value desc-text">{{ description }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label cause">⚠️ Primary Causes</span>
+                        <span class="value cause-text">{{ cause }}</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="label solution">💡 Recommended Solution</span>
+                        <span class="value solution-text">{{ solution }}</span>
+                    </div>
+                </div>
+
+                <a href="/" class="btn">Upload New Image</a>
+            </div>
+        </div>
+
+        {% if past_predictions %}
+        <div class="past-predictions">
+            <h3>📚 Prediction History</h3>
+            <table class="prediction-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Diagnosis</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in past_predictions %}
+                    <tr>
+                        <td>
+                            <img class="table-image"
+                                src="{{ url_for('static', filename='uploads/' + entry['filename']) }}"
+                                alt="Previous Scan" />
+                        </td>
+                        <td>{{ entry['result'] }}</td>
+                        <td>{{ entry['timestamp'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
