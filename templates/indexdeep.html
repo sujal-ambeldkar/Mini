@@ -10,7 +10,7 @@
     <title>Plant Disease Identifier</title>
     <link rel="stylesheet" href="/static/stylesdeep.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- 
+
 </head>
 
 <body>
@@ -25,7 +25,8 @@
                 <div class="nav-container">
                     <div class="logo">
                         <img src="/static/elements/logoplant.png" alt="AgriScan" class="logo-img">
-                        AgriScan</div>
+                        AgriScan
+                    </div>
                     <ul class="nav-links center-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#navbar">About</a></li>
@@ -37,7 +38,7 @@
                     </ul>
                 </div>
             </nav>
-    <!-- <div class="parallax-video"> 
+            <!-- <div class="parallax-video"> 
         <video autoplay muted loop id="background-video">
             <source src="/static/elements/framvid2.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -51,182 +52,227 @@
     -->
 
             <!-- Hero Section -->
-<section class="hero" id="Home">
-    <div class="hero-content-container">
-        <!-- Left Side: Intro and Farmer Photo -->
-        <div class="intro-section">
-            <div class="text-content">
-                <h1>Plant Health Diagnosis Made Simple!</h1>
-                <p class="intro-text">
-                    AgriScan revolutionizes plant disease detection with cutting-edge AI technology. 
-                    Our system helps farmers quickly identify plant health issues, providing accurate 
-                    diagnoses and treatment recommendations in seconds.
-                </p>
-            </div>
-            <div class="farmer-image">
-                <img src="/static/elements/hero-farmer-cut-india.png" alt="Farmer using AgriScan">
-            </div>
-        </div>
 
-        <!-- Right Side: Upload Card -->
-        <div class="upload-card">
-            <div class="upload-header">
-                <h2>Upload Plant Image</h2>
-            </div>
-            <div class="upload-body">
-                <img src="/static/elements/plant-7413415_1280.png" alt="Plant Preview" class="plant-preview">
-                <form action="/" method="post" enctype="multipart/form-data">
-                    <input type="file" name="file" id="fileInput" hidden accept="image/*" required>
-                    <label for="fileInput" class="upload-btn">Choose File</label>
-                    <button type="submit" class="analyze-btn">Analyze Now</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+            <section class="hero" id="Home">
 
-            <div id="navbar" >
+                <div class="hero-content-container">
+                    <!-- Left Side: Intro and Farmer Photo -->
+
+                    <div class="container1">
+                        <div class="intro-text">
+                            <h1>We Never Let Your Plant Suffer</h1>
+
+                        </div>
+                        <p class="para1">Detect plant diseases early with our web app.
+                            Get accurate results to help keep your plants healthy.And dignose them early</p>
+                        <div class="card3">
+                            <div class="slideshow-container">
+                                <div class="slide">
+                                    <img src="/static/elements/hero-farmer-cut-india.png" alt="Image 1">
+                                </div>
+                                <div class="slide">
+                                    <img src="/static/elements/hero2.webp" alt="Image 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="/static/elements/hero3.jpg" alt="Image 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="/static/elements/hero4.jpg" alt="Image 2">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Right Side: Upload Card -->
+                    <div class="upload-card">
+                        <div class="upload-header">
+                            <h2>Upload Plant Image</h2>
+                        </div>
+                        <div class="upload-body">
+                            <img src="/static/elements/plant-7413415_1280.png" alt="Plant Preview"
+                                class="plant-preview">
+                            <form action="/" method="post" enctype="multipart/form-data">
+                                <input type="file" name="file" id="fileInput" hidden accept="image/*" required>
+                                <label for="fileInput" class="upload-btn">Choose File</label>
+                                <button type="submit" class="analyze-btn">Analyze Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="navbar">
                 <a href="javascript:void(0);" onclick="loadPage('common')">Common disease</a>
                 <a href="javascript:void(0);" onclick="loadPage('fungal')">Fungal</a>
                 <a href="javascript:void(0);" onclick="loadPage('weed')">Weed</a>
             </div>
-            
+
             <!-- Content Area (this will be updated with AJAX) -->
             <div id="content">
                 <h2>Welcome to the homepage!</h2>
                 <p>This content will be replaced when you click a link in the navbar.</p>
             </div>
 
-    <!-- Team Section -->
-<section class="team-section" id="team">
-    <h1 class="section-title">Meet the Team!</h1>
-    <div class="team-grid">
-        <!-- Team Member 1 -->
-        <div class="team-card">
-            <div class="team-card-content">
-                <div class="team-card-image">
-                    <img src="/static/elements/sujal_d.jpg" alt="Sujal Dhandre">
-                </div>
-                <h2>Sujal Dhandre</h2>
-                <p>Lead ML Developer</p>
-                <div class="team-card-details">
-                    <p>Expert in machine learning and AI algorithms. Passionate about solving real-world problems with technology.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <!-- Team Section -->
+            <section class="team-section" id="team">
+                <h1 class="section-title">Meet the Team!</h1>
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="team-card-content">
+                            <div class="team-card-image">
+                                <img src="/static/elements/sujal_d.jpg" alt="Sujal Dhandre">
+                            </div>
+                            <h2>Sujal Dhandre</h2>
+                            <p>Lead ML Developer</p>
+                            <div class="team-card-details">
+                                <p>Expert in machine learning and AI algorithms. Passionate about solving real-world
+                                    problems with technology.</p>
+                                <div class="social-links">
+                                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="team-card-content">
+                            <div class="team-card-image">
+                                <img src="/static/elements/sujal_a.jpg" alt="Sujal Ambeldkar">
+                            </div>
+                            <h2>Sujal Ambeldkar</h2>
+                            <p>Web Developer</p>
+                            <div class="team-card-details">
+                                <p>Creative web developer with a knack for building beautiful, responsive, and
+                                    user-friendly interfaces.</p>
+                                <div class="social-links">
+                                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <div class="team-card-content">
+                            <div class="team-card-image">
+                                <img src="/static/elements/rahul.png" alt="Rahul Baid">
+                            </div>
+                            <h2>Rahul Baid</h2>
+                            <p>Android Developer</p>
+                            <div class="team-card-details">
+                                <p>Skilled Android developer with a passion for building seamless mobile experiences.
+                                </p>
+                                <div class="social-links">
+                                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- Team Member 2 -->
-        <div class="team-card">
-            <div class="team-card-content">
-                <div class="team-card-image">
-                    <img src="/static/elements/sujal_a.jpg" alt="Sujal Ambeldkar">
-                </div>
-                <h2>Sujal Ambeldkar</h2>
-                <p>Web Developer</p>
-                <div class="team-card-details">
-                    <p>Creative web developer with a knack for building beautiful, responsive, and user-friendly interfaces.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <script>
+                function loadPage(page) {
+                    const content = document.getElementById('content');
 
-        <!-- Team Member 3 -->
-        <div class="team-card">
-            <div class="team-card-content">
-                <div class="team-card-image">
-                    <img src="/static/elements/rahul.png" alt="Rahul Baid">
-                </div>
-                <h2>Rahul Baid</h2>
-                <p>Android Developer</p>
-                <div class="team-card-details">
-                    <p>Skilled Android developer with a passion for building seamless mobile experiences.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                    // Add fade-out class for smooth exit
+                    content.classList.add('fade-out');
 
-    <script>
-function loadPage(page) {
-    const content = document.getElementById('content');
-    
-    // Add fade-out class for smooth exit
-    content.classList.add('fade-out');
+                    // Wait for the fade-out animation to complete before making the AJAX request
+                    setTimeout(() => {
+                        // Create a new XMLHttpRequest object
+                        var xhr = new XMLHttpRequest();
+                        var url = page + '.html';  // e.g., common.html, fungal.html, weed.html
 
-    // Wait for the fade-out animation to complete before making the AJAX request
-    setTimeout(() => {
-        // Create a new XMLHttpRequest object
-        var xhr = new XMLHttpRequest();
-        var url = page + '.html';  // e.g., common.html, fungal.html, weed.html
-        
-        xhr.open('GET', url, true);
+                        xhr.open('GET', url, true);
 
-        xhr.onload = function () {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                // Update the content of the page
-                content.innerHTML = xhr.responseText;
-                
-                // Add fade-in class for smooth entry
-                content.classList.remove('fade-out');
-                content.classList.add('fade-in');
+                        xhr.onload = function () {
+                            if (xhr.status >= 200 && xhr.status < 300) {
+                                // Update the content of the page
+                                content.innerHTML = xhr.responseText;
 
-                // Remove the fade-in class after animation completes
-                setTimeout(() => content.classList.remove('fade-in'), 300);
-            } else {
-                content.innerHTML = 'Failed to load content!';
-            }
-        };
+                                // Add fade-in class for smooth entry
+                                content.classList.remove('fade-out');
+                                content.classList.add('fade-in');
 
-        xhr.send();
-    }, 300); // Duration should match the CSS fade-out transition duration
-}
+                                // Remove the fade-in class after animation completes
+                                setTimeout(() => content.classList.remove('fade-in'), 300);
+                            } else {
+                                content.innerHTML = 'Failed to load content!';
+                            }
+                        };
 
-
-        // Call the loadPage function with 'about' as the default page when the page loads
-        window.onload = function () {
-            loadPage('about');
-        };
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                        xhr.send();
+                    }, 300); // Duration should match the CSS fade-out transition duration
                 }
-            });
-        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.disease-card').forEach(card => {
-            observer.observe(card);
-        });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                const navbarHeight = document.querySelector('.main-nav').offsetHeight;
+                // Call the loadPage function with 'about' as the default page when the page loads
+                window.onload = function () {
+                    loadPage('about');
+                };
+                // Scroll animations
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
 
-                window.scrollTo({
-                    top: target.offsetTop - navbarHeight,
-                    behavior: 'smooth'
+                document.querySelectorAll('.disease-card').forEach(card => {
+                    observer.observe(card);
                 });
-            });
-        });
 
-    </script>
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        const navbarHeight = document.querySelector('.main-nav').offsetHeight;
+
+                        window.scrollTo({
+                            top: target.offsetTop - navbarHeight,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+                // ----------------------------------Javascript for sliding window----------------
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    const slides = document.querySelectorAll('.slide');
+                    let currentSlideIndex = 0;
+
+
+                    function moveToNextSlide() {
+
+                        slides[currentSlideIndex].classList.remove('active');
+
+
+                        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+
+                        slides[currentSlideIndex].classList.add('active');
+                    }
+
+
+                    slides[currentSlideIndex].classList.add('active');
+
+
+                    setInterval(moveToNextSlide, 4000);  // 3000 ms = 3 seconds
+                });
+
+            </script>
 </body>
 
 </html>
